@@ -1,5 +1,5 @@
 console.log(document.cookie)
-fetch('/my-account/update-email-address', {
+fetch('../../../my-account/update-email-address', {
   method: 'GET',
   headers: {
     'Content-Type': 'application/json'
