@@ -1,5 +1,5 @@
 console.log(document.cookie)
-fetch('https://bo-preprod-sip.costco.co.uk/my-account/update-email-address', {
+fetch('/my-account/update-email-address', {
   method: 'GET',
   headers: {
     'Content-Type': 'application/json'
