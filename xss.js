@@ -18,8 +18,8 @@ fetch('../../../my-account/update-email-address', {
   const parser = new DOMParser();
   const htmlDoc = parser.parseFromString(htmlContent, 'text/html');
   console.log('html:', html);
-  //const csrfToken = htmlDoc.querySelector('meta[name="csrf-token"]').getAttribute('content');
-  //console.log('CSRF Token:', csrfToken);
+  const csrfToken = htmlDoc.querySelector('meta[name="CSRFToken"]').getAttribute('value');
+  console.log('CSRF Token:', csrfToken);
 })
 .catch(error => {
   console.error('Error:', error);
