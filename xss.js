@@ -17,7 +17,6 @@ fetch('../../../my-account/update-email-address', {
   const htmlContent = json.htmlContent;
   const parser = new DOMParser();
   const htmlDoc = parser.parseFromString(htmlContent, 'text/html');
-  console.log('html:', html);
   const csrfToken = htmlDoc.querySelector('meta[name="CSRFToken"]').getAttribute('value');
   console.log('CSRF Token:', csrfToken);
 })
